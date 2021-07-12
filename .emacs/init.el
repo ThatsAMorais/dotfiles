@@ -293,3 +293,9 @@
 (use-package visual-fill-column
   :hook (org-mode . efs/org-mode-visual-fill))
 
+(use-package go-mode)
+(add-hook 'before-save-hook #'gofmt-before-save)
+(add-hook 'go-mode-hook 'lsp-deferred)
+
+(use-package python-mode)
+
