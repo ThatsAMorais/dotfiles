@@ -349,8 +349,8 @@
   (push '("conf-unix" . conf-unix) org-src-lang-modes)
 #+end_src
 
-
 ** Auto-tangle Configuration Files
+
 #+begin_src emacs-lisp
    (defun efs/org-babel-tangle-config ()
      (when (string-equal (buffer-file-name)
@@ -365,6 +365,7 @@
 * Development
 
 ** Projectile
+
 #+begin_src emacs-lisp
 
   (use-package projectile
@@ -389,9 +390,6 @@
   (use-package magit
     :custom
     (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
-
-  (use-package evil-magit
-    :after magit)
 
   (use-package forge)
 
